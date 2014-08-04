@@ -226,7 +226,24 @@
 					  var backgroundImage = document.getElementsByClassName("backstretch")[0].children[0];
 						backgroundImage.src = "img/background/on.jpg";                              
 
-			    }
+			    } else {
+                        form-control.removeClass('valid').addClass('error');
+                        var index = -1;
+                        try {
+                            var parts = resp.msg.split(' - ', 2);
+                            if (parts[1] === undefined) {
+                                msg = resp.msg;
+                            } else {
+                                var i = parseInt(parts[0], 10);
+                                if (i.toString() === parts[0]) {
+                                    index = parts[0];
+                                    msg = parts[1];
+                                } else {
+                                    index = -1;
+                                    msg = resp.msg;
+                                }
+                            }
+                        }
 			}
 		
 			$('#mc-form').ajaxChimp({
