@@ -244,14 +244,22 @@
                                 }
                             }
                         }
+                        catch (e) {
+                            index = -1;
+                            msg = resp.msg;
+                        }
+					}
 			}
-		
-			$('#mc-form').ajaxChimp({
-   		 		url: 'https://geekdaily.us5.list-manage.com/subscribe/post?u=73469051aa8b75a7e7b4e0aca&amp;id=a3884e48cc', 
-   		 		callback: callbackFunction
-			});
-		
+
 		</script>	
+
+		<script>
+			$('#mc-form').ajaxChimp({
+				language: 'en',
+		 		callback: callbackFunction,
+		 		url: 'https://geekdaily.us5.list-manage.com/subscribe/post?u=73469051aa8b75a7e7b4e0aca&amp;id=a3884e48cc' 
+			});
+		</script>
 		
 	</body>
 </html>
