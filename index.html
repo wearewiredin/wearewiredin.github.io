@@ -33,33 +33,33 @@
 				<div class="wrapper">
 					<div class="container">
 						<img src="img/logo/logo.png" alt="Logo">
-						<h1 class="heading">we are wired in</h1>
-						<h2>
+						<h1 class="heading" id="header1">we are wired in</h1>
+						<h2 id="lead1">
 							A modern productivity tool for Mac, iOS & your desk.
 						</h2>
-						<p class="lead">
+						<h2 id="lead2">
+						</h2>
+						<p class="lead" id="lead3">
 							Coming soon.
 						</p>
-						<div class="row">
-<!-- 							<div id="countdown"></div> -->
-						</div>
-
 
 						<div id="mc_embed_signup">
-							<form action="https://geekdaily.us5.list-manage.com/subscribe/post?u=73469051aa8b75a7e7b4e0aca&amp;id=a3884e48cc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline signup" target="_blank" novalidate>
-	
-							<div class="mc-field-group form-group">
-								<input type="email" value="" name="EMAIL" class="required email form-control" placeholder="hello@wearewired.in" id="mce-EMAIL">
-							</div>
-									<div class="form-group">
-										<button type="submit" class="btn btn-theme ladda-button" data-style="expand-left"><span class="ladda-label">Get Notified</span></button>
-									</div>
-							</form>
-						</div>
+							<form id="mc-form" class="validate form-inline signup">
+								<div class="mc-field-group form-group">
+									<input type="email" value="" name="EMAIL" class="required email form-control" placeholder="hello@wearewired.in" id="mce-EMAIL">
+								</div>
+							
+
+								<div class="form-group">
+									<button type="submit" class="btn btn-theme ladda-button" data-style="expand-left"><span class="ladda-label">Get Notified</span></button>
+								</div>
+					    	</form>
+					    </div>
+
 						<footer class="text-center">
-							<!-- <div class="social">
+							<div class="social">
 								<a href="http://twitter.com/wearewiredin" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
-							</div> -->
+							</div>
 						</footer>
 					</div>
 					<div class="arrow-down">
@@ -134,52 +134,6 @@
 				</div>
 			</div>
 		</section>
-
-		<!-- Team 
-		<section id="team" class="section">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						<h3 class="section-title">Our team</h3>
-						<div class="section-title-border"></div>
-					</div>
-				</div>
-				<div class="row text-center">
-					<div class="col-sm-3 text-center team-member-container wow fadeInDown">
-						<div class="team-member">
-							<div class="team-member-img">
-								<img src="img/portraits/1.jpg" alt="" class="img-responsive">
-							</div>
-							<div class="team-member-meta">
-								<h4>Joshua Howland</h4>
-								<span class="team-member-profession">Product Design</span>
-								<p>Fusce pulvinar dui eu dignissim semper. Donec non tellus felis. Vivamus dapibus placerat.</p>
-
-								<div class="social">
-									<a href="http://twitter.com/jkhowland" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 text-center team-member-container wow fadeInDown" data-wow-delay="0.2s">
-						<div class="team-member">
-							<div class="team-member-img">
-								<img src="img/portraits/2.jpg" alt="" class="img-responsive">
-							</div>
-							<div class="team-member-meta">
-								<h4>Caleb Hicks</h4>
-								<span class="text-muted team-member-profession">Developer</span>
-								<p>Sed posuere eu sem ac consectetur. Integer suscipit diam odio, in tincidunt dui aliquet eget.</p>
-								<div class="social">
-									<a href="#" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-//-->
 		
 		<!-- Contact -->
 		<section id="contact" class="section">
@@ -235,16 +189,52 @@
 		
 		
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.min.js"></script>		
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/jquery.backstretch.min.js"></script>
 		<script src="js/jquery.countdown.min.js"></script>
+		<script src="js/jquery.ajaxchimp.min.js"></script>
 		<script src="js/bootstrapValidator.min.js"></script>
 		<script src="js/validator/emailAddress.js"></script>
 		<script src="js/ladda.min.js"></script>
 		<script src="js/retina.min.js"></script>
 		<script src="js/wow.min.js"></script>
 		<script src="js/init.js"></script>
+		
+		<script>
+		
+			function callbackFunction (resp) {
+			    if (resp.result === 'success') {
+					console.log('success', resp);
+				
+					  var fieldHeaderElement = document.getElementById('header1');
+						fieldHeaderElement.innerHTML = "High Five!";
+
+					  var fieldLeadElement = document.getElementById('lead1');
+						fieldLeadElement.innerHTML = "You'll be the first to know when Wired In is available.";
+
+					  var fieldLead2Element = document.getElementById('lead2');
+						fieldLead2Element.innerHTML = "Follow us on Twitter for more frequent updates.";
+
+					  var fieldLead3Element = document.getElementById('lead3');
+						fieldLead3Element.innerHTML = "";
+						
+				 	  var formElement = document.getElementById('mc_embed_signup');
+				 	    formElement.remove();
+						
+					  var backgroundImage = document.getElementsByClassName("backstretch")[0].children[0];
+						backgroundImage.src = "img/background/on.jpg";                              
+
+			    }
+			}
+		
+			$('#mc-form').ajaxChimp({
+   		 		url: 'https://geekdaily.us5.list-manage.com/subscribe/post?u=73469051aa8b75a7e7b4e0aca&amp;id=a3884e48cc', 
+   		 		callback: callbackFunction
+			});
+		
+		</script>	
+		
 	</body>
 </html>
