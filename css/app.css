@@ -843,3 +843,26 @@ p.copyright {
 		float: right !important;
 	}
 }
+
+.footer-nav {
+    margin-bottom: 15px;
+}
+.footer-nav a {
+    margin: 0 15px;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.site-footer {
+    text-align: center;
+    color: #ededed
+    font-family: 'Lato', sans-serif;
+}
+
+.full-footer {
+    padding: 2rem 0 2rem 0;
+}
+
+.site-footer a {
+    color: #ededed;
+}
