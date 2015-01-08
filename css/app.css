@@ -600,6 +600,129 @@ form.signup button.btn {
 }
 
 
+/* Teaser */
+
+#teaser{
+	background: #ededed;
+	color: #626262;
+	color: white;
+	text-align: center;
+	position: relative;
+}
+
+#teaser h1,
+#teaser h2,
+#teaser h3,
+#teaser h4,
+#teaser h5,
+#about h6{
+	color: #626262;
+}
+
+#teaser.fallback-active {
+/*background-image: url("/img/background/on.jpg");*/
+background-position: 50% 50%;
+background-size: cover;
+}
+
+#teaser.video-playing {
+height: auto;
+}
+
+#teaser:before {
+content: "";
+display: inline-block;
+height: 100%;
+vertical-align: middle;
+}
+
+#teaser.video-playing {
+height: auto;
+}
+
+#teaser.video-playing .video-wrapper {
+margin: 0 auto;
+padding: 20px 0;
+max-width: 1200px;
+height: 100%;
+width: 100%;
+}
+
+.fluid-width-video-wrapper iframe, .fluid-width-video-wrapper object, .fluid-width-video-wrapper embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+.fluid-width-video-wrapper {
+width: 100%;
+position: relative;
+padding: 0;
+}
+
+.image-box-container{
+	margin: 60px 0;
+}
+
+.image-box-container:last-child{
+	margin-bottom: 0;
+}
+
+.image-box {
+	text-align: center;
+	background: #e4e4e4;
+}
+
+.image-box .icon {
+	width: 100px;
+	height: 55px;
+	color: #fff;
+	position: relative;
+	background: #bbbcbc;
+	margin: 35px auto 20px;
+}
+
+.image-box .icon:before {
+	content: "";
+	position: absolute;
+	top: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 25px solid #bbbcbc;
+}
+
+.image-box .icon:after {
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid #bbbcbc;
+}
+
+.image-box .icon i {
+	font-size: 35px;
+	padding-top: 12px;
+	display: block;
+}
+
+.image-box .description {
+	padding: 20px 15px 10px;
+}
+
+.image-box .description p {
+	font-size: 14px;
+}
+
+
 /* About */
 
 #about{
