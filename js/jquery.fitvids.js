@@ -19,7 +19,7 @@
         $teaserEl = null,
 
         maxVidHeight = 600,
-        fullVideoURL = '//player.vimeo.com/video/116280755',
+        fullVideoURL = '//www.youtube.com/embed/CtLEKjycdCw',
         animationTime = 300,
         teaserVidFiles = {
           'video/mp4': "<%= asset_path('loop-bg.mp4') %>",
