@@ -1,8 +1,18 @@
-<script>
-    window.onload = function() {
-    <!-- Deep link URL for existing users with app already installed on their device -->
-        window.location = 'wiredin://'+window.location.pathname + window.location.search;
-    <!-- Download URL (TUNE link) for new users to download the app -->
-        setTimeout("window.location = 'https://wearewired.in';", 1000);
-    }
-</script>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <script>
+            window.onload = function() {
+            <!-- Deep link URL for existing users with app already installed on their device -->
+                var url = 'wiredin://'+window.location.pathname + window.location.search;
+                window.open(url)
+            <!-- Download URL (TUNE link) for new users to download the app -->
+                setTimeout("window.location = 'https://wearewired.in';", 1000);
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Success</h2>
+        <a href="wiredin://">Open Wired In</a>
+    </body>
+</html>
